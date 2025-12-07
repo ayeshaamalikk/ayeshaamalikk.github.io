@@ -579,7 +579,6 @@
       padding-right: 0.5rem;
       scrollbar-width: thin;
       scrollbar-color: var(--border) transparent;
-      position: relative;
     }
 
     .announcements::-webkit-scrollbar {
@@ -597,48 +596,6 @@
 
     .announcements::-webkit-scrollbar-thumb:hover {
       background-color: var(--text-secondary);
-    }
-
-    /* Mobile scrollbar visibility */
-    @media (max-width: 768px) {
-      .announcements {
-        scrollbar-width: auto;
-        scrollbar-color: var(--text-secondary) rgba(0, 0, 0, 0.1);
-        padding-right: 0.75rem;
-      }
-
-      .announcements::-webkit-scrollbar {
-        width: 8px;
-        -webkit-appearance: none;
-      }
-
-      .announcements::-webkit-scrollbar-track {
-        background: rgba(0, 0, 0, 0.05);
-        border-radius: 4px;
-      }
-
-      .announcements::-webkit-scrollbar-thumb {
-        background-color: var(--text-secondary);
-        border-radius: 4px;
-        border: 1px solid rgba(255, 255, 255, 0.3);
-      }
-
-      .announcements::-webkit-scrollbar-thumb:hover {
-        background-color: var(--text-primary);
-      }
-
-      /* Add gradient fade at bottom to indicate scrollable content */
-      .announcements::after {
-        content: '';
-        position: sticky;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        height: 20px;
-        background: linear-gradient(to bottom, transparent, rgba(255, 255, 255, 0.8));
-        pointer-events: none;
-        display: block;
-      }
     }
 
     .announcement-item {
